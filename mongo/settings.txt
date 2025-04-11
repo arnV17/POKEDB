@@ -1,0 +1,4 @@
+root: C:\Users\Arnv\new\EWA\Pokedex\pokedex-app\mongo 
+path: C:\Program Files\nodejs 
+arch: 64 
+proxy: none
