@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import Poke from '../Db/schema.js'; // adjust path if needed
+
 
 const app = express();
 const PORT = 3000;
