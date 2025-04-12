@@ -1,6 +1,13 @@
 // Import mongoose and schema using ES Modules
 import mongoose from 'mongoose';
-import Poke from './schema.js'; // Assuming 'schema.js' exports the model as default
+const pokeSchema = new mongoose.Schema({
+    name: String,
+    data: Object,
+});
+
+// Export the model
+const Poke = mongoose.model('Poke', pokeSchema);
+
 
 // Connect to MongoDB
 await mongoose.connect('mongodb://localhost/pokedex', {
