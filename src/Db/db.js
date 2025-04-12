@@ -10,10 +10,12 @@ const Poke = mongoose.model('Poke', pokeSchema);
 
 
 // Connect to MongoDB
-await mongoose.connect('mongodb://localhost/pokedex', {
+// Connect to MongoDB
+await mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
+
 
 console.log('MongoDB connected');
  
