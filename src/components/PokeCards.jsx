@@ -11,7 +11,7 @@ function PokeCards({ pokemun }) {
 
     async function fetchFromMongoDB(name) {
       try {
-        const res = await fetch(`http://localhost:3000/api/pokemon`);
+        const res = await fetch(`https://pokedb-1lyt.onrender.com`);
         const allPokemon = await res.json();
         const found = allPokemon.find((p) => p.name === name.toLowerCase());
         return found ? found.data : null;
@@ -27,7 +27,7 @@ function PokeCards({ pokemun }) {
         const result = await res.json();
 
         // Save to MongoDB
-        await fetch("http://localhost:3000/api/pokemon", {
+        await fetch("https://pokedb-1lyt.onrender.com", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
